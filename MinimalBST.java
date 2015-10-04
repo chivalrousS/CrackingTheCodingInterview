@@ -8,15 +8,8 @@ import java.util.*;
 public class MinimalBST {
 	public static int buildMinimalBST(int[] vals) {
 	     // write code here
-		int nums = vals.length;
-		double value = nums + 1.0;
-		int count = 0;
-		while(value > 1)
-		{
-			++count;
-			value /= 2;
-		}
-		return count;
+             double value = vals.length + 1.0;
+	     return (int)Math.ceil(Math.log(value)/Math.log(2));
 	}
 
 	public static void main(String[] args) {
